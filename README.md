@@ -1,5 +1,5 @@
 # Welcome to json-rpc-jmeter test suite
-[![CircleCI](https://circleci.com/gh/iovlabs-qa/json-rpc-jmeter/tree/master.svg?style=svg)](https://circleci.com/gh/iovlabs-qa/json-rpc-jmeter/tree/master)
+[![CircleCI](https://circleci.com/gh/rsksmart/json-rpc-jmeter/tree/master.svg?style=svg)](https://circleci.com/gh/rsksmart/json-rpc-jmeter/tree/master)
 
 
 
