@@ -68,7 +68,7 @@
       </HeaderManager>
       <hashTree/>
       <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
-        <boolProp name="ResultCollector.error_logging">true</boolProp>
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
           <value class="SampleSaveConfiguration">
@@ -2608,6 +2608,60 @@
             </JSONPostProcessor>
             <hashTree/>
           </hashTree>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="trace_block ContractA kill()" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;trace_block&quot;, &quot;params&quot;:[&quot;${killBlockHash}&quot;], &quot;id&quot;:1}&#xd;
+</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${targetHost}</stringProp>
+          <stringProp name="HTTPSampler.port">${targetPort}</stringProp>
+          <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path"></stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-1390286863">{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:1,&quot;result&quot;:</stringProp>
+              <stringProp name="-1381440235">{&quot;action&quot;:</stringProp>
+              <stringProp name="1310953851">&quot;gas&quot;:&quot;0x</stringProp>
+              <stringProp name="361739946">&quot;input&quot;:&quot;0x</stringProp>
+              <stringProp name="1018391907">&quot;value&quot;:&quot;0x</stringProp>
+              <stringProp name="-1863581479">&quot;blockHash&quot;:&quot;0x</stringProp>
+              <stringProp name="539182124">&quot;blockNumber&quot;:</stringProp>
+              <stringProp name="1570503720">&quot;transactionHash&quot;:&quot;0x</stringProp>
+              <stringProp name="-679808547">&quot;transactionPosition&quot;:</stringProp>
+              <stringProp name="-1727141138">&quot;type&quot;:&quot;</stringProp>
+              <stringProp name="-1680935548">&quot;subtraces&quot;:</stringProp>
+              <stringProp name="155802665">&quot;traceAddress&quot;:</stringProp>
+              <stringProp name="-1686417640">result&quot;:{&quot;gasUsed&quot;:&quot;0x</stringProp>
+              <stringProp name="-1390286863">{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:1,&quot;result&quot;:</stringProp>
+              <stringProp name="1931029318">&quot;from&quot;:&quot;0x</stringProp>
+              <stringProp name="-1381440235">{&quot;action&quot;:</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">2</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Supported methods" enabled="true">
