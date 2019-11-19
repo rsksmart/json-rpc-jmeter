@@ -32,7 +32,7 @@ jobs:
                     ./gradlew clean build -x test
       
       # Download and cache dependencies
-      - restore_cache:
+      - restore_cache: 
           keys:
           - v1-dependencies-{{ checksum "pom.xml" }}
           # fallback to using the latest cache if no exact match is found
@@ -49,7 +49,7 @@ jobs:
       - run:
           name: Start RSKj & Run JMeter
           command: |
-                      java -Dminer.client.autoMine=true -cp ~/rsksmart/rskj/rskj-core/build/libs/rskj-core-1.2.0-SNAPSHOT-all.jar co.rsk.Start --regtest  nohup &               
+                      java -Dminer.client.autoMine=true -Drpc.providers.web.ws.enabled=true -cp ~/rsksmart/rskj/rskj-core/build/libs/rskj-core-1.2.0-SNAPSHOT-all.jar co.rsk.Start --regtest  nohup &               
                       until nc -z 127.0.0.1 4444
                       do
                         echo "Waiting for RskJ..."
