@@ -534,3 +534,4 @@ target/jmeter/reports/JSON-RPC/sbadmin2-1.0.7/less/sb-admin-2.less
 target/jmeter/reports/JSON-RPC/sbadmin2-1.0.7/less/variables.less
 target/jmeter/reports/JSON-RPC/sbadmin2-1.0.7/README.md
 target/jmeter/results/20190816-JSON-RPC.csv
+jmeter.log
