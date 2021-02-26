@@ -76,7 +76,7 @@ jobs:
                         "type": "header",
                         "text": {
                             "type": "plain_text",
-                            "text": "RskJ Web3js Tests Passed :white_check_mark:",
+                            "text": "RskJ JMeter Tests Passed :white_check_mark:",
                             "emoji": true
                         }
                     },
@@ -121,7 +121,7 @@ jobs:
                         "type": "header",
                         "text": {
                             "type": "plain_text",
-                            "text": "RskJ Web3js Tests Failed :red_circle:",
+                            "text": "RskJ JMeter Tests Failed :red_circle:",
                             "emoji": true
                         }
                     },
