@@ -33,7 +33,7 @@
                                     <version>1.2.2</version>
                                 </plugin>
                             </jmeterPlugins>
-                            <generateReports>false</generateReports>
+                            <generateReports>true</generateReports>
                         </configuration>
                     </execution>
                 </executions>
