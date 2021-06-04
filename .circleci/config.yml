@@ -164,16 +164,16 @@ jobs:
                 }
           event: fail
 
-      - store_artifacts:
-          path: /home/circleci/tmp/target/jmeter/reports
-          destination: ~/tmp/Results
+#      - store_artifacts:
+#          path: /home/circleci/tmp/target/jmeter/reports
+#          destination: ~/tmp/Results
           
-      - store_artifacts:
-          path: target/jmeter/results
-          destination: ~/tmp/Results
+#      - store_artifacts:
+#          path: target/jmeter/results
+#          destination: ~/tmp/Results
           
-      - store_test_results:
-          path: ~/tmp/Results
+#      - store_test_results:
+#          path: ~/tmp/Results
 
           
 
