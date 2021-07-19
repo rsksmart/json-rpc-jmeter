@@ -15,7 +15,7 @@ parameters:
         default: "master"
     slack_channel:
         type: string
-        default: "integration-tests"
+        default: "qa-automated-tests"
 orbs:
   slack: circleci/slack@4.1
 jobs:
@@ -64,6 +64,7 @@ jobs:
       - run:
           name: Start RSKj & Run JMeter
           command: |
+                      ls ~/rsksmart/rskj/rskj-core/build/libs/
                       java -Dminer.client.autoMine=true -Drpc.providers.web.ws.enabled=true -cp ~/rsksmart/rskj/rskj-core/build/libs/rskj-core-<< pipeline.parameters.version >>-all.jar co.rsk.Start --regtest  nohup &               
                       until nc -z 127.0.0.1 4444
                       do
