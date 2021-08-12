@@ -89,7 +89,7 @@ jobs:
                         "fields": [
                             {
                                 "type": "mrkdwn",
-                                "text": "*Tested Repository*: << pipeline.parameters.repo >>"
+                                "text": "*RSKj Repository*: << pipeline.parameters.repo >>"
                             },
                             {
                                 "type": "mrkdwn",
@@ -139,7 +139,7 @@ jobs:
                         "fields": [
                             {
                                 "type": "mrkdwn",
-                                "text": "*Tested Repository*: << pipeline.parameters.repo >>"
+                                "text": "*RSKj Repository*: << pipeline.parameters.repo >>"
                             },
                             {
                                 "type": "mrkdwn",
