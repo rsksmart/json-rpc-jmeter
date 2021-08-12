@@ -159,7 +159,7 @@ jobs:
                             },
                             {
                                 "type": "mrkdwn",
-                                "text": "*Triggered by: ${CIRCLE_USERNAME}"
+                                "text": "*Requester*: ${CIRCLE_USERNAME}"
                             }
                         ]
                     },
