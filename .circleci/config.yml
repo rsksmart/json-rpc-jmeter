@@ -102,6 +102,10 @@ jobs:
                             {
                                 "type": "mrkdwn",
                                 "text": "*Tests Branch*: ${CIRCLE_BRANCH}"
+                            },
+                            {
+                                "type": "mrkdwn",
+                                "text": "*Triggered by: ${CIRCLE_USERNAME}"
                             }
                         ]
                     },
@@ -152,6 +156,10 @@ jobs:
                             {
                                 "type": "mrkdwn",
                                 "text": "*Tests Branch*: ${CIRCLE_BRANCH}"
+                            },
+                            {
+                                "type": "mrkdwn",
+                                "text": "*Triggered by: ${CIRCLE_USERNAME}"
                             }
                         ]
                     },
