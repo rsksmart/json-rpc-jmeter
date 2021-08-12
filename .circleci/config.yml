@@ -15,7 +15,7 @@ parameters:
         default: "master"
     slack_channel:
         type: string
-        default: "UDY9ZV16J"
+        default: "integration-tests"
 orbs:
   slack: circleci/slack@4.1
 jobs:
@@ -93,7 +93,7 @@ jobs:
                             },
                             {
                                 "type": "mrkdwn",
-                                "text": "*Tested Branch*: << pipeline.parameters.branch >>"
+                                "text": "*RSKj Branch*: << pipeline.parameters.branch >>"
                             },
                             {
                                 "type": "mrkdwn",
@@ -143,11 +143,15 @@ jobs:
                             },
                             {
                                 "type": "mrkdwn",
-                                "text": "*Tested Branch*: << pipeline.parameters.branch >>"
+                                "text": "*RSKj Branch*: << pipeline.parameters.branch >>"
                             },
                             {
                                 "type": "mrkdwn",
-                                "text": "*Tested Version*: << pipeline.parameters.version >>"
+                                "text": "*RSKj Version*: << pipeline.parameters.version >>"
+                            },
+                            {
+                                "type": "mrkdwn",
+                                "text": "*Tests Branch*: ${CIRCLE_BRANCH}"
                             }
                         ]
                     },
