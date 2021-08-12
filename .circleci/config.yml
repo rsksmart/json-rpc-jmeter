@@ -63,15 +63,14 @@ jobs:
       # run tests!
       - run:
           name: Start RSKj & Run JMeter
-          command: |    
-                    echo ${CIRCLE_BRANCH}
-#                      java -Dminer.client.autoMine=true -Drpc.providers.web.ws.enabled=true -cp ~/rsksmart/rskj/rskj-core/build/libs/rskj-core-<< pipeline.parameters.version >>-all.jar co.rsk.Start --regtest  nohup &               
-#                      until nc -z 127.0.0.1 4444
-#                      do
-#                        echo "Waiting for RskJ..."
-#                        sleep 1
-#                      done
-#                      mvn verify
+          command: |
+                      java -Dminer.client.autoMine=true -Drpc.providers.web.ws.enabled=true -cp ~/rsksmart/rskj/rskj-core/build/libs/rskj-core-<< pipeline.parameters.version >>-all.jar co.rsk.Start --regtest  nohup &               
+                      until nc -z 127.0.0.1 4444
+                      do
+                        echo "Waiting for RskJ..."
+                        sleep 1
+                      done
+                      mvn verify
       - slack/notify:
           channel: << pipeline.parameters.slack_channel >>
           custom: |
