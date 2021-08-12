@@ -9,7 +9,7 @@ parameters:
         default: "rsksmart/rskj.git"
     version:
         type: string
-        default: "3.1.0-SNAPSHOT"
+        default: ""
     branch:
         type: string
         default: "master"
@@ -45,6 +45,10 @@ jobs:
                     cd ~/rsksmart/rskj/
                     ./configure.sh
                     ./gradlew clean build -x test
+                    cd ~/rsksmart/rskj/rskj-core/build/libs/
+                    f=`ls *-all.jar`
+                    version=`echo $f | cut -c 11-15`
+                    echo "export VERSION_FOR_SLACK='${version}'" >> $BASH_ENV
       
       # Download and cache dependencies
       - restore_cache: 
@@ -64,7 +68,7 @@ jobs:
       - run:
           name: Start RSKj & Run JMeter
           command: |
-                      java -Dminer.client.autoMine=true -Drpc.providers.web.ws.enabled=true -cp ~/rsksmart/rskj/rskj-core/build/libs/rskj-core-<< pipeline.parameters.version >>-all.jar co.rsk.Start --regtest  nohup &               
+                      java -Dminer.client.autoMine=true -Drpc.providers.web.ws.enabled=true -cp ~/rsksmart/rskj/rskj-core/build/libs/rskj-core-*-all.jar co.rsk.Start --regtest  nohup &               
                       until nc -z 127.0.0.1 4444
                       do
                         echo "Waiting for RskJ..."
@@ -97,7 +101,7 @@ jobs:
                             },
                             {
                                 "type": "mrkdwn",
-                                "text": "*RSKj Version*: << pipeline.parameters.version >>"
+                                "text": "*RSKj Version*: ${VERSION_FOR_SLACK}"
                             },
                             {
                                 "type": "mrkdwn",
@@ -151,7 +155,7 @@ jobs:
                             },
                             {
                                 "type": "mrkdwn",
-                                "text": "*RSKj Version*: << pipeline.parameters.version >>"
+                                "text": "*RSKj Version*: ${VERSION_FOR_SLACK}"
                             },
                             {
                                 "type": "mrkdwn",
