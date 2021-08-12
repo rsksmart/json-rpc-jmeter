@@ -15,7 +15,7 @@ parameters:
         default: "master"
     slack_channel:
         type: string
-        default: "UDY9ZV16Js"
+        default: "UDY9ZV16J"
 orbs:
   slack: circleci/slack@4.1
 jobs:
