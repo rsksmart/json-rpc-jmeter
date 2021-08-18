@@ -6938,7 +6938,7 @@
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="-511124204">{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:11,&quot;result&quot;:&quot;0x</stringProp>
                 <stringProp name="-1016682829">{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:12,&quot;result&quot;:&quot;0x</stringProp>
-                <stringProp name="254578796">{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;eth_subscription&quot;,&quot;params&quot;:{&quot;subscription&quot;:&quot;0x</stringProp>
+                <stringProp name="254578796">{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;eth_subscription&quot;,&quot;params&quot;:{&quot;subscription&quot;:&quot;0x.+?&quot;,&quot;result&quot;:{&quot;difficulty&quot;:&quot;0x1&quot;,&quot;extraData&quot;:&quot;0x.+?&quot;,&quot;gasLimit&quot;:&quot;0x[^0][^0].+?&quot;</stringProp>
               </collectionProp>
               <stringProp name="Assertion.custom_message"></stringProp>
               <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
