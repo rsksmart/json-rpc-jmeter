@@ -4,7 +4,7 @@
 
 
 # About
-This is a Test Suite for JSON RPC compatibility validation of [RSKj](https://github.com/rsksmart/rskj).
+Based on [jmeter-maven-plugin](https://github.com/jmeter-maven-plugin/jmeter-maven-plugin), this is a Test Suite for JSON RPC compatibility validation of [RSKj](https://github.com/rsksmart/rskj).
 It's implemented using Apache JMeter and test every JSON RPC method validating response format and content.
 This is still a BETA but it's fully functional and tests can be incorporated.
 
@@ -19,3 +19,17 @@ Instructions:
 
 Detailed results report will available in ./Results/JSON-RPC/index.html
 This repository also includes CircleCI configuration for workflows on commit/builds and daily job.
+
+
+Running the GUI
+-----
+
+To create or update new jmeter test cases, open the file ```src/test/jmeter/JSON-RPC.jmx``` in the JMeter GUI.
+
+To invoke the JMeter GUI, use the following command:
+
+```
+mvn jmeter:configure jmeter:gui
+```
+
+See the associated [Wiki](https://github.com/jmeter-maven-plugin/jmeter-maven-plugin/wiki/Basic-Configuration#running-the-jmeter-gui) entry for more information.
