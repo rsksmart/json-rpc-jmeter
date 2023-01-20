@@ -5,7 +5,9 @@
 
 # About
 Based on [jmeter-maven-plugin](https://github.com/jmeter-maven-plugin/jmeter-maven-plugin), this is a Test Suite for JSON RPC compatibility validation of [RSKj](https://github.com/rsksmart/rskj).
-It's implemented using Apache JMeter and test every JSON RPC method validating response format and content.
+
+It's implemented using Apache JMeter and test [every JSON RPC method](https://developers.rsk.co/rsk/node/architecture/json-rpc/) validating response format and content.
+
 This is still a BETA but it's fully functional and tests can be incorporated.
 
 
@@ -13,7 +15,7 @@ This is still a BETA but it's fully functional and tests can be incorporated.
 Prerequisites:
 - Maven 
 
-Instructions:
+Instructions to run the tests:
 - Clone this repository
 - mvn verify
 
