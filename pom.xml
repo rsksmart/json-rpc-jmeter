@@ -6,7 +6,6 @@
     <artifactId>maven</artifactId>
     <version>1.0-SNAPSHOT</version>
     <build>
-    <pluginManagement>
         <plugins>
             <plugin>
                 <groupId>com.lazerycode.jmeter</groupId>
@@ -40,13 +39,12 @@
                 </executions>
                 <configuration>                    
                     <generateReports>true</generateReports>
+                    <testFilesDirectory>src/test/jmeter/</testFilesDirectory>
                     <jmeterExtensions>
-                            <artifact>kg.apc:jmeter-plugins-manager:1.8</artifact>
                             <artifact>net.luminis.jmeter:jmeter-websocket-samplers:1.2.8</artifact>
                     </jmeterExtensions>
                 </configuration>
             </plugin>
         </plugins>
-    </pluginManagement>
     </build>
 </project>
