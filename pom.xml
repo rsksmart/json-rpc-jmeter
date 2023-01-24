@@ -6,11 +6,12 @@
     <artifactId>maven</artifactId>
     <version>1.0-SNAPSHOT</version>
     <build>
+    <pluginManagement>
         <plugins>
             <plugin>
                 <groupId>com.lazerycode.jmeter</groupId>
                 <artifactId>jmeter-maven-plugin</artifactId>
-                <version>2.8.5</version>
+                <version>3.7.0</version>
                 <executions>
                     <!-- Run JMeter tests -->
                     <execution>
@@ -30,14 +31,22 @@
                                 <plugin>
                                     <groupId>net.luminis.jmeter</groupId>
                                     <artifactId>jmeter-websocket-samplers</artifactId>
-                                    <version>1.2.2</version>
+                                    <version>1.2.8</version>
                                 </plugin>
                             </jmeterPlugins>
                             <generateReports>true</generateReports>
                         </configuration>
                     </execution>
                 </executions>
+                <configuration>                    
+                    <generateReports>true</generateReports>
+                    <jmeterExtensions>
+                            <artifact>kg.apc:jmeter-plugins-manager:1.8</artifact>
+                            <artifact>net.luminis.jmeter:jmeter-websocket-samplers:1.2.8</artifact>
+                    </jmeterExtensions>
+                </configuration>
             </plugin>
         </plugins>
+    </pluginManagement>
     </build>
 </project>
