@@ -1795,8 +1795,7 @@
             <collectionProp name="Arguments.arguments">
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;personal_sendTransaction&quot;, &quot;params&quot;:[{&quot;from&quot;:&quot;${newAccount}&quot;,&quot;to&quot;:&quot;0x7986b3df570230288501eea3d890bd66948c9b79&quot;,&quot;value&quot;:&quot;0x000000000060000&quot;},&quot;iovlabsqa&quot;],&quot;id&quot;:1}&#xd;
-</stringProp>
+                <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;personal_sendTransaction&quot;, &quot;params&quot;:[{&quot;from&quot;:&quot;${newAccount}&quot;,&quot;to&quot;:&quot;0x7986b3df570230288501eea3d890bd66948c9b79&quot;,&quot;value&quot;:&quot;0x000000000060000&quot;},&quot;iovlabsqa&quot;],&quot;id&quot;:1}</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
