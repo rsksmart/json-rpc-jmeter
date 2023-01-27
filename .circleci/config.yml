@@ -75,6 +75,11 @@ jobs:
                       sleep 1
                     done
                     mvn verify
+
+      - store_artifacts:
+          path: ~/tmp/target/jmeter/results
+          destination: ~/tmp/results
+          
       - slack/notify:
           channel: << pipeline.parameters.slack_channel >>
           custom: |
@@ -129,6 +134,7 @@ jobs:
                 ]
                 }
           event: pass
+
       - slack/notify:
           channel: << pipeline.parameters.slack_channel >>
           custom: |
@@ -183,19 +189,6 @@ jobs:
                 ]
                 }
           event: fail
-
-#      - store_artifacts:
-#          path: /home/circleci/tmp/target/jmeter/reports
-#          destination: ~/tmp/Results
-
-#      - store_artifacts:
-#          path: target/jmeter/results
-#          destination: ~/tmp/Results
-
-#      - store_test_results:
-#          path: ~/tmp/Results
-
-
 
 workflows:
     commit:
