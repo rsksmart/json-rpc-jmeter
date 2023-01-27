@@ -75,9 +75,9 @@ jobs:
                         sleep 1
                       done
                       mvn verify
-                      
+
       - store_artifacts:
-          path: ~/tmp/target/jmeter/results/*-JSON-RPC.csv
+          path: ~/tmp/target/jmeter/results
           destination: ~/tmp/results
 
       - slack/notify:
