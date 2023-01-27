@@ -224,8 +224,7 @@
               <collectionProp name="Arguments.arguments">
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;eth_getTransactionReceipt&quot;,&quot;params&quot;:[&quot;${trxHash}&quot;],&quot;id&quot;:1}&#xd;
-</stringProp>
+                  <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;eth_getTransactionReceipt&quot;,&quot;params&quot;:[&quot;${trxHash}&quot;],&quot;id&quot;:1}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -316,8 +315,7 @@
               <collectionProp name="Arguments.arguments">
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;eth_getTransactionReceipt&quot;,&quot;params&quot;:[&quot;${trxHashCtrct2}&quot;],&quot;id&quot;:1}&#xd;
-</stringProp>
+                  <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;eth_getTransactionReceipt&quot;,&quot;params&quot;:[&quot;${trxHashCtrct2}&quot;],&quot;id&quot;:1}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -408,8 +406,7 @@
               <collectionProp name="Arguments.arguments">
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;eth_getTransactionReceipt&quot;,&quot;params&quot;:[&quot;${trxHashCtrctA}&quot;],&quot;id&quot;:1}&#xd;
-</stringProp>
+                  <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;eth_getTransactionReceipt&quot;,&quot;params&quot;:[&quot;${trxHashCtrctA}&quot;],&quot;id&quot;:1}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -500,8 +497,7 @@
               <collectionProp name="Arguments.arguments">
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;eth_getTransactionReceipt&quot;,&quot;params&quot;:[&quot;${trxHashCtrctEmpty}&quot;],&quot;id&quot;:1}&#xd;
-</stringProp>
+                  <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;eth_getTransactionReceipt&quot;,&quot;params&quot;:[&quot;${trxHashCtrctEmpty}&quot;],&quot;id&quot;:1}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -680,8 +676,7 @@
               <collectionProp name="Arguments.arguments">
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;personal_importRawKey&quot;, &quot;params&quot;:[&quot;3cd552634687ce8193239dcf0848935d8e0a46cc75945f1a58cfdd470e36875b&quot;,&quot;3cd552634687ce8193239dcf0848935d8e0a46cc75945f1a58cfdd470e36875b&quot;], &quot;id&quot;:1}&#xd;
-</stringProp>
+                  <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;personal_importRawKey&quot;, &quot;params&quot;:[&quot;3cd552634687ce8193239dcf0848935d8e0a46cc75945f1a58cfdd470e36875b&quot;,&quot;3cd552634687ce8193239dcf0848935d8e0a46cc75945f1a58cfdd470e36875b&quot;], &quot;id&quot;:1}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -719,8 +714,7 @@
               <collectionProp name="Arguments.arguments">
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;personal_importRawKey&quot;, &quot;params&quot;:[&quot;9d051dd8b7177864e947ad8a782d84a9f9f1ef57e80770ed296c7aa570ae51f3&quot;,&quot;passphrase&quot;], &quot;id&quot;:1}&#xd;
-</stringProp>
+                  <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;personal_importRawKey&quot;, &quot;params&quot;:[&quot;9d051dd8b7177864e947ad8a782d84a9f9f1ef57e80770ed296c7aa570ae51f3&quot;,&quot;passphrase&quot;], &quot;id&quot;:1}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -758,8 +752,7 @@
               <collectionProp name="Arguments.arguments">
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;personal_importRawKey&quot;, &quot;params&quot;:[&quot;0xa8609b845aac6645fcdbf2e730bde98714579679b7e7ddcd39e7d2eff5f569ca&quot;,&quot;passphrase&quot;], &quot;id&quot;:1}&#xd;
-</stringProp>
+                  <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;personal_importRawKey&quot;, &quot;params&quot;:[&quot;0xa8609b845aac6645fcdbf2e730bde98714579679b7e7ddcd39e7d2eff5f569ca&quot;,&quot;passphrase&quot;], &quot;id&quot;:1}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -797,8 +790,7 @@
               <collectionProp name="Arguments.arguments">
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;personal_lockAccount&quot;, &quot;params&quot;:[&quot;0x51D83Bc706a41c3ab75161a51493C1Ba5afD6e38&quot;], &quot;id&quot;:1}&#xd;
-</stringProp>
+                  <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;personal_lockAccount&quot;, &quot;params&quot;:[&quot;0x51D83Bc706a41c3ab75161a51493C1Ba5afD6e38&quot;], &quot;id&quot;:1}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -919,8 +911,7 @@
               <collectionProp name="Arguments.arguments">
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;personal_unlockAccount&quot;, &quot;params&quot;:[&quot;0x51D83Bc706a41c3ab75161a51493C1Ba5afD6e38&quot;,&quot;passphrase&quot;,null], &quot;id&quot;:1}&#xd;
-</stringProp>
+                  <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;personal_unlockAccount&quot;, &quot;params&quot;:[&quot;0x51D83Bc706a41c3ab75161a51493C1Ba5afD6e38&quot;,&quot;passphrase&quot;,null], &quot;id&quot;:1}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -1003,8 +994,7 @@
               <collectionProp name="Arguments.arguments">
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;personal_importRawKey&quot;, &quot;params&quot;:[&quot;9d051dd8b7177864e947ad8a782d84a9f9f1ef57e80770ed296c7atortafrita&quot;,&quot;passphrase&quot;], &quot;id&quot;:1}&#xd;
-</stringProp>
+                  <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;personal_importRawKey&quot;, &quot;params&quot;:[&quot;9d051dd8b7177864e947ad8a782d84a9f9f1ef57e80770ed296c7atortafrita&quot;,&quot;passphrase&quot;], &quot;id&quot;:1}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -1042,8 +1032,7 @@
               <collectionProp name="Arguments.arguments">
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;personal_importRawKey&quot;, &quot;params&quot;:[&quot;03ff5dd9e7a3c0ff212d4a2693ce59df3a29a472ae4b318705777786535e472a&quot;], &quot;id&quot;:1}&#xd;
-</stringProp>
+                  <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;personal_importRawKey&quot;, &quot;params&quot;:[&quot;03ff5dd9e7a3c0ff212d4a2693ce59df3a29a472ae4b318705777786535e472a&quot;], &quot;id&quot;:1}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -1081,8 +1070,7 @@
               <collectionProp name="Arguments.arguments">
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;personal_importRawKey&quot;, &quot;params&quot;:[&quot;03ff5dd9e7a3c0ff212d4a2693ce59df3a29a472ae4b318705777786535e472a&quot;,&quot;&quot;], &quot;id&quot;:1}&#xd;
-</stringProp>
+                  <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;personal_importRawKey&quot;, &quot;params&quot;:[&quot;03ff5dd9e7a3c0ff212d4a2693ce59df3a29a472ae4b318705777786535e472a&quot;,&quot;&quot;], &quot;id&quot;:1}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -1120,8 +1108,7 @@
               <collectionProp name="Arguments.arguments">
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;personal_sendTransaction&quot;, &quot;params&quot;:[{&quot;from&quot;:&quot;0x51D83Bc706a41c3ab75161a51493C1Ba5afD6e38&quot;,&quot;to&quot;:&quot;0x7986b3df570230288501eea3d890bd66948c9b79&quot;,&quot;value&quot;:&quot;0x000000000060000&quot;},&quot;passphrase&quot;],&quot;id&quot;:1}&#xd;
-</stringProp>
+                  <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;personal_sendTransaction&quot;, &quot;params&quot;:[{&quot;from&quot;:&quot;0x51D83Bc706a41c3ab75161a51493C1Ba5afD6e38&quot;,&quot;to&quot;:&quot;0x7986b3df570230288501eea3d890bd66948c9b79&quot;,&quot;value&quot;:&quot;0x000000000060000&quot;},&quot;passphrase&quot;],&quot;id&quot;:1}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -1144,8 +1131,7 @@
           <hashTree>
             <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
               <collectionProp name="Asserion.test_strings">
-                <stringProp name="-1432352413">{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:1,&quot;error&quot;:{&quot;code&quot;:-32010,&quot;message&quot;:&quot;insufficient funds to pay for pending and new transaction&quot;}}
-</stringProp>
+                <stringProp name="-184752249">{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:1,&quot;error&quot;:{&quot;code&quot;:-32010,&quot;message&quot;:&quot;insufficient funds to pay for pending and new transaction&quot;}}</stringProp>
               </collectionProp>
               <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
               <boolProp name="Assertion.assume_success">true</boolProp>
@@ -1160,8 +1146,7 @@
               <collectionProp name="Arguments.arguments">
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;personal_sendTransaction&quot;, &quot;params&quot;:[{&quot;from&quot;:&quot;0x30f73fF727838611cFeBb055A18Ec3086091f1BA&quot;,&quot;to&quot;:&quot;0x7986b3df570230288501eea3d890bd66948c9b79&quot;,&quot;value&quot;:&quot;0x000000000060000&quot;},&quot;&quot;],&quot;id&quot;:1}&#xd;
-</stringProp>
+                  <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;personal_sendTransaction&quot;, &quot;params&quot;:[{&quot;from&quot;:&quot;0x30f73fF727838611cFeBb055A18Ec3086091f1BA&quot;,&quot;to&quot;:&quot;0x7986b3df570230288501eea3d890bd66948c9b79&quot;,&quot;value&quot;:&quot;0x000000000060000&quot;},&quot;&quot;],&quot;id&quot;:1}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -1199,8 +1184,7 @@
               <collectionProp name="Arguments.arguments">
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;personal_sendTransaction&quot;, &quot;params&quot;:[{&quot;from&quot;:&quot;0x51D83Bc706a41c3ab75161a51493C1Ba5afD6e38&quot;,&quot;to&quot;:&quot;0x7986b3df570230288501eea3d890bd66948c9b79&quot;,&quot;value&quot;:&quot;0x000000000060000&quot;},&quot;toto&quot;],&quot;id&quot;:1}&#xd;
-</stringProp>
+                  <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;personal_sendTransaction&quot;, &quot;params&quot;:[{&quot;from&quot;:&quot;0x51D83Bc706a41c3ab75161a51493C1Ba5afD6e38&quot;,&quot;to&quot;:&quot;0x7986b3df570230288501eea3d890bd66948c9b79&quot;,&quot;value&quot;:&quot;0x000000000060000&quot;},&quot;toto&quot;],&quot;id&quot;:1}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -1238,8 +1222,7 @@
               <collectionProp name="Arguments.arguments">
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;personal_unlockAccount&quot;, &quot;params&quot;:[&quot;0x51D83Bc706a41c3ab75161a51493C1Ba5afD6e38&quot;,&quot;iovlabsqa&quot;,null], &quot;id&quot;:1}&#xd;
-</stringProp>
+                  <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;personal_unlockAccount&quot;, &quot;params&quot;:[&quot;0x51D83Bc706a41c3ab75161a51493C1Ba5afD6e38&quot;,&quot;iovlabsqa&quot;,null], &quot;id&quot;:1}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -1277,8 +1260,7 @@
               <collectionProp name="Arguments.arguments">
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;eth_getTransactionReceipt&quot;,&quot;params&quot;:[&quot;${importedAcctTrxHash}&quot;],&quot;id&quot;:1}&#xd;
-</stringProp>
+                  <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;eth_getTransactionReceipt&quot;,&quot;params&quot;:[&quot;${importedAcctTrxHash}&quot;],&quot;id&quot;:1}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -1324,8 +1306,7 @@
               <collectionProp name="Arguments.arguments">
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;personal_lockAccount&quot;, &quot;params&quot;:[&quot;0x51D83Bc706a41c3ab75161a51493C1Ba5afD6e38&quot;], &quot;id&quot;:1}&#xd;
-</stringProp>
+                  <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;personal_lockAccount&quot;, &quot;params&quot;:[&quot;0x51D83Bc706a41c3ab75161a51493C1Ba5afD6e38&quot;], &quot;id&quot;:1}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -1402,8 +1383,7 @@
             <collectionProp name="Arguments.arguments">
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;personal_lockAccount&quot;, &quot;params&quot;:[&quot;${newAccount}&quot;], &quot;id&quot;:1}&#xd;
-</stringProp>
+                <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;personal_lockAccount&quot;, &quot;params&quot;:[&quot;${newAccount}&quot;], &quot;id&quot;:1}</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
@@ -1441,8 +1421,7 @@
             <collectionProp name="Arguments.arguments">
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;personal_unlockAccount&quot;, &quot;params&quot;:[&quot;${newAccount}&quot;,&quot;iovlabsqa&quot;,null], &quot;id&quot;:1}&#xd;
-</stringProp>
+                <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;personal_unlockAccount&quot;, &quot;params&quot;:[&quot;${newAccount}&quot;,&quot;iovlabsqa&quot;,null], &quot;id&quot;:1}</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
@@ -1480,8 +1459,7 @@
             <collectionProp name="Arguments.arguments">
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;txpool_content&quot;, &quot;id&quot;:1}&#xd;
-</stringProp>
+                <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;txpool_content&quot;, &quot;id&quot;:1}</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
@@ -1519,8 +1497,7 @@
             <collectionProp name="Arguments.arguments">
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;txpool_inspect&quot;, &quot;id&quot;:1}&#xd;
-</stringProp>
+                <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;txpool_inspect&quot;, &quot;id&quot;:1}</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
@@ -1558,8 +1535,7 @@
             <collectionProp name="Arguments.arguments">
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;txpool_status&quot;, &quot;id&quot;:1}&#xd;
-</stringProp>
+                <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;txpool_status&quot;, &quot;id&quot;:1}</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
