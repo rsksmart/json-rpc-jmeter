@@ -75,6 +75,11 @@ jobs:
                         sleep 1
                       done
                       mvn verify
+                      
+      - store_artifacts:
+          path: ~/tmp/target/jmeter/results/*-JSON-RPC.csv
+          destination: ~/tmp/results
+
       - slack/notify:
           channel: << pipeline.parameters.slack_channel >>
           custom: |
@@ -182,12 +187,7 @@ jobs:
                     }
                 ]
                 }
-          event: fail
-
-     - store_artifacts:
-         path: ~/tmp/target/jmeter/results/*-JSON-RPC.csv
-         destination: ~/tmp/results
-          
+          event: fail          
 
 workflows:
     commit:
