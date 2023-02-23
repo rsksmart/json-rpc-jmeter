@@ -49,9 +49,9 @@ jobs:
                     f=`ls *-all.jar`
                     version=`echo $f | cut -c 11-15`
                     echo "export VERSION_FOR_SLACK='${version}'" >> $BASH_ENV
-      
+
       # Download and cache dependencies
-      - restore_cache: 
+      - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "pom.xml" }}
           # fallback to using the latest cache if no exact match is found
@@ -68,13 +68,13 @@ jobs:
       - run:
           name: Start RSKj & Run JMeter
           command: |
-                      java -Dminer.client.autoMine=true -Drpc.providers.web.ws.enabled=true -cp ~/rsksmart/rskj/rskj-core/build/libs/rskj-core-*-all.jar co.rsk.Start --regtest  nohup &               
-                      until nc -z 127.0.0.1 4444
-                      do
-                        echo "Waiting for RskJ..."
-                        sleep 1
-                      done
-                      mvn verify
+                    java -Dminer.client.autoMine=true -Dtransaction.accountTxRateLimit.enabled=false -Dkeyvalue.datasource=rocksdb -cp ~/rsksmart/rskj/rskj-core/build/libs/rskj-core-*-all.jar co.rsk.Start --regtest  nohup &               
+                    until nc -z 127.0.0.1 4444
+                    do
+                      echo "Waiting for RskJ..."
+                      sleep 1
+                    done
+                    mvn verify
       - slack/notify:
           channel: << pipeline.parameters.slack_channel >>
           custom: |
@@ -187,15 +187,15 @@ jobs:
 #      - store_artifacts:
 #          path: /home/circleci/tmp/target/jmeter/reports
 #          destination: ~/tmp/Results
-          
+
 #      - store_artifacts:
 #          path: target/jmeter/results
 #          destination: ~/tmp/Results
-          
+
 #      - store_test_results:
 #          path: ~/tmp/Results
 
-          
+
 
 workflows:
     commit:
