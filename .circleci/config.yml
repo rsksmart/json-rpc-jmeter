@@ -22,7 +22,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: cimg/openjdk:8.0.292
+      - image: cimg/openjdk:17.0
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -68,7 +68,7 @@ jobs:
       - run:
           name: Start RSKj & Run JMeter
           command: |
-                    java -Dminer.client.autoMine=true -Dtransaction.accountTxRateLimit.enabled=false -Dkeyvalue.datasource=rocksdb -Drpc.providers.web.ws.enabled=true  -cp ~/rsksmart/rskj/rskj-core/build/libs/rskj-core-*-all.jar co.rsk.Start --regtest  nohup &               
+                    java -Dminer.client.autoMine=true -Dtransaction.accountTxRateLimit.enabled=false -Drpc.providers.web.ws.enabled=true -cp ~/rsksmart/rskj/rskj-core/build/libs/rskj-core-*-all.jar co.rsk.Start --regtest  nohup &               
                     until nc -z 127.0.0.1 4444
                     do
                       echo "Waiting for RskJ..."
