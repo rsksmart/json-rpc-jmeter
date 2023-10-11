@@ -12,7 +12,7 @@ parameters:
         default: ""
     branch:
         type: string
-        default: "master"
+        default: "json_rpc_param_validation"
     slack_channel:
         type: string
         default: "integration-tests"
