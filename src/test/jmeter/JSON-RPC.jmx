@@ -3454,7 +3454,7 @@
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Supported methods">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Supported methods" enabled="true">
         <intProp name="ThreadGroup.num_threads">1</intProp>
         <intProp name="ThreadGroup.ramp_time">1</intProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
@@ -3465,7 +3465,7 @@
         </elementProp>
       </ThreadGroup>
       <hashTree>
-        <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="General Assertions">
+        <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="General Assertions" enabled="true">
           <collectionProp name="Asserion.test_strings">
             <stringProp name="-1358333642">&quot;Internal server error&quot;</stringProp>
             <stringProp name="1639790942">&quot;result&quot;:null</stringProp>
@@ -6105,7 +6105,7 @@
         </hashTree>
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="eth_getStorageAt" enabled="true"/>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="eth_getStorageAt 0x0 latest">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="eth_getStorageAt 0x0 latest" enabled="true">
             <intProp name="HTTPSampler.concurrentPool">6</intProp>
             <stringProp name="HTTPSampler.domain">${targetHost}</stringProp>
             <stringProp name="HTTPSampler.port">${targetPort}</stringProp>
@@ -6126,7 +6126,7 @@
             <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="1869735849">{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:39,&quot;result&quot;:&quot;0x0000000000000000000000000000000000000000000000000000000000000000&quot;}</stringProp>
               </collectionProp>
@@ -6158,7 +6158,7 @@
             <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="1869735849">{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:39,&quot;result&quot;:&quot;0x0000000000000000000000000000000000000000000000000000000000000000&quot;}</stringProp>
               </collectionProp>
@@ -6190,7 +6190,7 @@
             <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="1869735849">{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:39,&quot;result&quot;:&quot;0x0000000000000000000000000000000000000000000000000000000000000000&quot;}</stringProp>
               </collectionProp>
@@ -7791,7 +7791,7 @@
           </ResponseAssertion>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="eth_pendingTransactions" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="eth_pendingTransactions">
           <intProp name="HTTPSampler.concurrentPool">6</intProp>
           <stringProp name="HTTPSampler.domain">${targetHost}</stringProp>
           <stringProp name="HTTPSampler.port">${targetPort}</stringProp>
@@ -7812,9 +7812,9 @@
           <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
         </HTTPSamplerProxy>
         <hashTree>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion">
             <collectionProp name="Asserion.test_strings">
-              <stringProp name="470530008">{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:1,&quot;error&quot;:{&quot;code&quot;:-32601,&quot;message&quot;:&quot;method not found&quot;}}</stringProp>
+              <stringProp name="-278901609">{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:1,&quot;error&quot;:{&quot;code&quot;:-32602,&quot;message&quot;:&quot;method parameters invalid&quot;}}</stringProp>
             </collectionProp>
             <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
             <boolProp name="Assertion.assume_success">true</boolProp>
