@@ -68,7 +68,7 @@ jobs:
       - run:
           name: Start RSKj & Run JMeter
           command: |
-                    java -Dminer.client.autoMine=true -Dtransaction.accountTxRateLimit.enabled=false -Drpc.providers.web.ws.enabled=true -cp ~/rsksmart/rskj/rskj-core/build/libs/rskj-core-*-all.jar co.rsk.Start --regtest  nohup &               
+                    java -Dminer.client.autoMine=true -Dtransaction.accountTxRateLimit.enabled=false -Drpc.providers.web.ws.enabled=true -Drpc.modules.debug.enabled=true -Drpc.modules.trace.enabled=true -cp ~/rsksmart/rskj/rskj-core/build/libs/rskj-core-*-all.jar co.rsk.Start --regtest  nohup &               
                     until nc -z 127.0.0.1 4444
                     do
                       echo "Waiting for RskJ..."
