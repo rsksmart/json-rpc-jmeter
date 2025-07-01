@@ -1,0 +1,153 @@
+name: RSKj JMeter Tests
+
+on:
+  push:
+    branches: master
+  pull_request:
+    branches: master
+  schedule:
+    # Daily at 01:22 UTC (equivalent to CircleCI cron: "22 01 * * *")
+    - cron: '22 1 * * *'
+  workflow_dispatch:
+    inputs:
+      repo:
+        description: 'RSKj repository'
+        required: false
+        default: 'rsksmart/rskj.git'
+        type: string
+      version:
+        description: 'RSKj version'
+        required: false
+        default: ''
+        type: string
+      branch:
+        description: 'RSKj branch'
+        required: false
+        default: 'master'
+        type: string
+      slack_channel:
+        description: 'Slack channel'
+        required: false
+        default: 'integration-tests'
+        type: string
+
+env:
+  MAVEN_OPTS: -Xmx3200m
+  RSKJ_REPO: ${{ github.event.inputs.repo || 'rsksmart/rskj.git' }}
+  RSKJ_BRANCH: ${{ github.event.inputs.branch || 'master' }}
+  SLACK_CHANNEL: ${{ github.event.inputs.slack_channel || 'integration-tests' }}
+
+jobs:
+  rskj-jmeter-tests:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Clone and Build RSKj
+        run: |
+          git clone -b $RSKJ_BRANCH https://github.com/$RSKJ_REPO ~/rsksmart/rskj
+          cd ~/rsksmart/rskj/
+          ./configure.sh
+          ./gradlew clean build -x test --no-daemon
+          cd ~/rsksmart/rskj/rskj-core/build/libs/
+          f=`ls *-all.jar`
+          version=`echo $f | cut -c 11-15`
+          echo "VERSION_FOR_SLACK=${version}" >> $GITHUB_ENV
+
+      - name: Cache Maven dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
+
+      - name: Cache Gradle dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.gradle
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/gradle/wrapper/gradle-wrapper.properties') }}
+          restore-keys: ${{ runner.os }}-gradle
+
+      - name: Download Maven dependencies
+        run: mvn dependency:go-offline
+
+      - name: Start RSKj & Run JMeter
+        run: |
+          java -Dminer.client.autoMine=true -Dtransaction.accountTxRateLimit.enabled=false -Drpc.providers.web.ws.enabled=true -Drpc.modules.debug.enabled=true -Drpc.modules.trace.enabled=true -cp ~/rsksmart/rskj/rskj-core/build/libs/rskj-core-*-all.jar co.rsk.Start --regtest &
+          RSKJ_PID=$!
+          
+          # Wait for RSKj to start with timeout
+          timeout=120
+          counter=0
+          until nc -z 127.0.0.1 4444 || [ $counter -ge $timeout ]
+          do
+            echo "Waiting for RskJ... ($counter/$timeout)"
+            sleep 1
+            counter=$((counter + 1))
+          done
+          
+          if [ $counter -ge $timeout ]; then
+            echo "RSKj failed to start within $timeout seconds"
+            kill $RSKJ_PID 2>/dev/null || true
+            exit 1
+          fi
+          
+          echo "RSKj started successfully"
+          mvn verify
+          
+          # Cleanup
+          kill $RSKJ_PID 2>/dev/null || true
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: jmeter-results-${{ github.run_id }}
+          path: target/jmeter/results/
+          retention-days: 30
+
+      - name: Send Slack notification on success
+        if: success() && env.SLACK_WEBHOOK_URL != ''
+        uses: 8398a7/action-slack@v3
+        with:
+          status: success
+          channel: ${{ env.SLACK_CHANNEL }}
+          text: |
+            :white_check_mark: RskJ JMeter Tests Passed
+            
+            *RSKj Repository*: ${{ env.RSKJ_REPO }}
+            *RSKj Branch*: ${{ env.RSKJ_BRANCH }}
+            *RSKj Version*: ${{ env.VERSION_FOR_SLACK }}
+            *Tests Branch*: ${{ github.ref_name }}
+            *Requester*: ${{ github.actor }}
+            
+            <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|View Job>
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
+      - name: Send Slack notification on failure
+        if: failure() && env.SLACK_WEBHOOK_URL != ''
+        uses: 8398a7/action-slack@v3
+        with:
+          status: failure
+          channel: ${{ env.SLACK_CHANNEL }}
+          text: |
+            :red_circle: RskJ JMeter Tests Failed
+            
+            *RSKj Repository*: ${{ env.RSKJ_REPO }}
+            *RSKj Branch*: ${{ env.RSKJ_BRANCH }}
+            *RSKj Version*: ${{ env.VERSION_FOR_SLACK }}
+            *Tests Branch*: ${{ github.ref_name }}
+            *Requester*: ${{ github.actor }}
+            
+            <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|View Job>
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} 
